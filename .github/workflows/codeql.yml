@@ -51,6 +51,7 @@ jobs:
     - name: Build java code
       run: |
         ./mvnw package
+      working-directory: src/main/java/org/test/vuln
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
       with:
